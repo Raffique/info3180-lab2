@@ -7,6 +7,10 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
+
+def format_date_joined(data: datetime):
+    return data.strftime("%B, %Y")
 
 
 ###
@@ -34,6 +38,11 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
+
+@app.route('/profile/')
+def profile():
+    """Rebder website's profile page."""
+    return render_template('profile.html', date=format_date_joined(datetime.date(2022, 2, 13)))
 
 
 @app.after_request

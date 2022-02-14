@@ -1,3 +1,94 @@
 body {
     padding-top: 5rem;
 }
+
+@keyframes glow {
+    0%   {background-color: rgb(60, 0, 0);}
+    25%  {background-color: darkred;}
+    50%  {background-color: rgb(170, 0, 0);}
+    75%  {background-color: darkred}
+    100% {background-color: rgb(60, 0, 0);}
+  }
+
+.card {
+    width: 550px;
+    border: 1px solid gray;
+    border-radius: 15px;
+   /*display: grid;
+   grid-template-rows: 1fr 1fr;*/
+}
+
+
+
+.user {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgb(60, 0, 0);
+    animation-name: glow;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.info{
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.profile img {
+    height: 120px;
+    width: 120px;
+    margin-top: 2px
+}
+
+.profile {
+    padding-top: 50px;
+    top: -50px;
+    left: 38%;
+    
+    
+}
+
+.bio{
+    
+    padding: 30px;
+}
+
+.about{
+    margin-bottom: 15px;
+}
+
+.follownumbers{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.follownumbers > div {
+    width: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.follow {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: limegreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 35px;
+    width: 150px;
+}
+
+.follow:hover{
+    background-color: green;
+}
+
+.follow:active{
+    background-color: darkgreen;
+}
+

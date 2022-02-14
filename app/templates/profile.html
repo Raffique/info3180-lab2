@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block main %}
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="card">
+        
+        <div class="user text-center">
+            <div class="profile"> 
+                <img src="{{ url_for('static', filename='images/profile.jpeg') }}" class="rounded-circle">
+            </div>
+            <div class="info">
+                <h4 class="mb-0">Raffique Muir</h4>
+                <span><a href="#">@raffiquemuir</a></span> 
+                <span class="d-block mb-2">St. Andrew, Jamaica</span> 
+                <span class="d-block mb-2">joined {{date}}</span> 
+            </div>
+        </div>
+        
+        <div class="bio text-center">
+
+            <div  class="about text-muted">
+                <p>
+                I am a Electronics and Software engineer, 
+                with 4 years of experience with implementing crowd control systems at Vim Enteprize ltd. 
+                Experience in other fields such as app development for cross platforms, 
+                full stack dev and robotics. Please contact me at 876-***-**** to enquire of my services
+                </p>
+            </div>
+            
+            
+            <div class="follownumbers ">
+                <div>
+                    <h5 class="mb-0">200</h5> <span>Posts</span>
+                </div>
+                <div>
+                    <h5 class="mb-0">500</h5> <span>Following</span>
+                </div>
+                <div>
+                    <h5 class="mb-0">1,200</h5> <span>Followers</span>
+                </div>
+            </div>
+            <button class="follow">Follow</button>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
